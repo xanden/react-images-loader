@@ -52,8 +52,8 @@ export const generateProductionConfiguration = () =>
     },
     plugins: [
       new MiniCssExtractPlugin({
-        filename: 'css/[name].[contenthash].[hash:5].css',
-        chunkFilename: 'css/[name].[contenthash].[hash:5].css',
+        filename: '[name].[contenthash].[hash:5].css',
+        chunkFilename: '[name].[contenthash].[hash:5].css',
       }),
       new CleanWebpackPlugin(build, {
         allowExternal: true,

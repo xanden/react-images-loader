@@ -17,10 +17,10 @@ export const generateCommonConfiguration = () => {
       app: source,
     },
     output: {
-      filename: 'js/[name].[hash].js',
+      filename: 'index.js',
       path: build,
       pathinfo: false,
-      chunkFilename: 'js/[name].chunk.[hash].js',
+      chunkFilename: '[name].chunk.[hash].js',
       publicPath: '',
     },
     resolve: {
@@ -110,25 +110,25 @@ export const generateCommonConfiguration = () => {
     plugins: [
       new FriendlyErrorsWebpackPlugin(),
 
-      new HtmlWebpackPlugin({
-        hash: true,
-        inject: false,
-        minify: true,
-        template: HtmlWebpackTemplate,
-        title: 'react-image-loader',
-        appMountIds: ['app'],
-        meta: [
-          {
-            name: 'robots',
-            content: 'noindex',
-          },
-          {
-            name: 'viewport',
-            content: 'width=device-width, initial-scale=1',
-          },
-        ],
-        mobile: false,
-      }),
+      // new HtmlWebpackPlugin({
+      //   hash: true,
+      //   inject: false,
+      //   minify: true,
+      //   template: HtmlWebpackTemplate,
+      //   title: 'react-image-loader',
+      //   appMountIds: ['app'],
+      //   meta: [
+      //     {
+      //       name: 'robots',
+      //       content: 'noindex',
+      //     },
+      //     {
+      //       name: 'viewport',
+      //       content: 'width=device-width, initial-scale=1',
+      //     },
+      //   ],
+      //   mobile: false,
+      // }),
       new DefinePlugin({
         __ENV__: JSON.stringify(BUILD_ENV),
         __DEV__: BUILD_ENV === 'development',
