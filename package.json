@@ -1,5 +1,5 @@
 {
-  "name": "react-image-loader",
+  "name": "react-images-loader",
   "version": "1.0.0",
   "description": "Image loader library for react.",
   "main": "build/index.js",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xanden/react-image-loader.git"
+    "url": "git+https://github.com/xanden/react-images-loader.git"
   },
   "keywords": [
     "react",
@@ -31,9 +31,9 @@
   "author": "xanden",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/xanden/react-image-loader/issues"
+    "url": "https://github.com/xanden/react-images-loader/issues"
   },
-  "homepage": "https://github.com/xanden/react-image-loader#readme",
+  "homepage": "https://github.com/xanden/react-images-loader#readme",
   "dependencies": {
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
