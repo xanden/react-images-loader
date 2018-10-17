@@ -1,6 +1,6 @@
 {
   "name": "react-images-loader",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Image loader library for react.",
   "main": "dist/index.js",
   "scripts": {
