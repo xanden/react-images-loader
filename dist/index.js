@@ -1,1 +1,268 @@
-!function(e){var t={};function r(n){if(t[n])return t[n].exports;var o=t[n]={i:n,l:!1,exports:{}};return e[n].call(o.exports,o,o.exports,r),o.l=!0,o.exports}r.m=e,r.c=t,r.d=function(e,t,n){r.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:n})},r.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},r.t=function(e,t){if(1&t&&(e=r(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var n=Object.create(null);if(r.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var o in e)r.d(n,o,function(t){return e[t]}.bind(null,o));return n},r.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return r.d(t,"a",t),t},r.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},r.p="",r(r.s=2)}([function(e,t,r){e.exports=r(5)()},function(e,t,r){"use strict";e.exports=r(3)},function(e,t,r){"use strict";r.r(t);var n=r(1),o=r.n(n),i=r(0),u=r.n(i);function c(e){return(c="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e})(e)}function l(e,t){if(e!==t)throw new TypeError("Cannot instantiate an arrow function")}function a(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}function f(e){return(f=Object.setPrototypeOf?Object.getPrototypeOf:function(e){return e.__proto__||Object.getPrototypeOf(e)})(e)}function s(e,t){return(s=Object.setPrototypeOf||function(e,t){return e.__proto__=t,e})(e,t)}function p(e){if(void 0===e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return e}function y(e,t,r){return t in e?Object.defineProperty(e,t,{value:r,enumerable:!0,configurable:!0,writable:!0}):e[t]=r,e}var d=function(e){function t(){var e,r,n=this;!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,t);for(var o=arguments.length,i=new Array(o),u=0;u<o;u++)i[u]=arguments[u];return y(p(p(r=function(e,t){return!t||"object"!==c(t)&&"function"!=typeof t?p(e):t}(this,(e=f(t)).call.apply(e,[this].concat(i))))),"state",{isLoading:!0,isError:!1,src:null,width:null,height:null,errMsg:null}),y(p(p(r)),"isCancelled",!1),y(p(p(r)),"reload",function(e){var t=this;l(this,n),r.setState({isLoading:!0,isError:!1,src:null,errMsg:null});var o=new Image;o.src=e.src,o.onload=function(){l(this,t),!r.isCancelled&&r.setState({src:o.src,width:o.width,height:o.height,isLoading:!1,isError:!1,errMsg:null}),e.onLoad&&e.onLoad(o)}.bind(this),o.onerror=function(n){l(this,t),r.setState({src:null,width:null,height:null,isLoading:!1,isError:!0,errMsg:n}),e.onError&&e.onError(n)}.bind(this)}.bind(this)),r}return function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function");e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,writable:!0,configurable:!0}}),t&&s(e,t)}(t,n["Component"]),function(e,t,r){t&&a(e.prototype,t),r&&a(e,r)}(t,[{key:"componentDidMount",value:function(){this.reload(this.props)}},{key:"componentWillUnmount",value:function(){this.isCancelled=!0}},{key:"render",value:function(){var e=this.props,t=e.loading,r=e.error,n=e.image,i=e.style,u=e.className,c=e.alt,l=this.state,a=l.src,f=l.width,s=l.height,p=l.isLoading,y=l.isError,d=l.errMsg;return t&&p?t():r&&y&&d?r(d):a&&n?n({src:a,width:f,height:s}):a?o.a.createElement("img",{src:a,style:i,className:u,width:f,height:s,alt:c}):null}}],[{key:"getDerivedStateFromProps",value:function(e,t){return e.src!==t.src?e:null}}]),t}();y(d,"propTypes",{loading:u.a.func,error:u.a.func,image:u.a.func,style:u.a.oneOfType([u.a.string,u.a.object]),src:u.a.string,alt:u.a.string,className:u.a.oneOfType([u.a.string,u.a.object])}),t.default=d},function(e,t,r){"use strict";var n=r(4),o="function"==typeof Symbol&&Symbol.for,i=o?Symbol.for("react.element"):60103,u=o?Symbol.for("react.portal"):60106,c=o?Symbol.for("react.fragment"):60107,l=o?Symbol.for("react.strict_mode"):60108,a=o?Symbol.for("react.profiler"):60114,f=o?Symbol.for("react.provider"):60109,s=o?Symbol.for("react.context"):60110,p=o?Symbol.for("react.async_mode"):60111,y=o?Symbol.for("react.forward_ref"):60112;o&&Symbol.for("react.placeholder");var d="function"==typeof Symbol&&Symbol.iterator;function h(e){for(var t=arguments.length-1,r="https://reactjs.org/docs/error-decoder.html?invariant="+e,n=0;n<t;n++)r+="&args[]="+encodeURIComponent(arguments[n+1]);!function(e,t,r,n,o,i,u,c){if(!e){if(e=void 0,void 0===t)e=Error("Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.");else{var l=[r,n,o,i,u,c],a=0;(e=Error(t.replace(/%s/g,function(){return l[a++]}))).name="Invariant Violation"}throw e.framesToPop=1,e}}(!1,"Minified React error #"+e+"; visit %s for the full message or use the non-minified dev environment for full errors and additional helpful warnings. ",r)}var b={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}},v={};function m(e,t,r){this.props=e,this.context=t,this.refs=v,this.updater=r||b}function g(){}function O(e,t,r){this.props=e,this.context=t,this.refs=v,this.updater=r||b}m.prototype.isReactComponent={},m.prototype.setState=function(e,t){"object"!=typeof e&&"function"!=typeof e&&null!=e&&h("85"),this.updater.enqueueSetState(this,e,t,"setState")},m.prototype.forceUpdate=function(e){this.updater.enqueueForceUpdate(this,e,"forceUpdate")},g.prototype=m.prototype;var _=O.prototype=new g;_.constructor=O,n(_,m.prototype),_.isPureReactComponent=!0;var w={current:null,currentDispatcher:null},j=Object.prototype.hasOwnProperty,S={key:!0,ref:!0,__self:!0,__source:!0};function P(e,t,r){var n=void 0,o={},u=null,c=null;if(null!=t)for(n in void 0!==t.ref&&(c=t.ref),void 0!==t.key&&(u=""+t.key),t)j.call(t,n)&&!S.hasOwnProperty(n)&&(o[n]=t[n]);var l=arguments.length-2;if(1===l)o.children=r;else if(1<l){for(var a=Array(l),f=0;f<l;f++)a[f]=arguments[f+2];o.children=a}if(e&&e.defaultProps)for(n in l=e.defaultProps)void 0===o[n]&&(o[n]=l[n]);return{$$typeof:i,type:e,key:u,ref:c,props:o,_owner:w.current}}function k(e){return"object"==typeof e&&null!==e&&e.$$typeof===i}var E=/\/+/g,x=[];function C(e,t,r,n){if(x.length){var o=x.pop();return o.result=e,o.keyPrefix=t,o.func=r,o.context=n,o.count=0,o}return{result:e,keyPrefix:t,func:r,context:n,count:0}}function T(e){e.result=null,e.keyPrefix=null,e.func=null,e.context=null,e.count=0,10>x.length&&x.push(e)}function $(e,t,r){return null==e?0:function e(t,r,n,o){var c=typeof t;"undefined"!==c&&"boolean"!==c||(t=null);var l=!1;if(null===t)l=!0;else switch(c){case"string":case"number":l=!0;break;case"object":switch(t.$$typeof){case i:case u:l=!0}}if(l)return n(o,t,""===r?"."+R(t,0):r),1;if(l=0,r=""===r?".":r+":",Array.isArray(t))for(var a=0;a<t.length;a++){var f=r+R(c=t[a],a);l+=e(c,f,n,o)}else if(f=null===t||"object"!=typeof t?null:"function"==typeof(f=d&&t[d]||t["@@iterator"])?f:null,"function"==typeof f)for(t=f.call(t),a=0;!(c=t.next()).done;)l+=e(c=c.value,f=r+R(c,a++),n,o);else"object"===c&&h("31","[object Object]"==(n=""+t)?"object with keys {"+Object.keys(t).join(", ")+"}":n,"");return l}(e,"",t,r)}function R(e,t){return"object"==typeof e&&null!==e&&null!=e.key?function(e){var t={"=":"=0",":":"=2"};return"$"+(""+e).replace(/[=:]/g,function(e){return t[e]})}(e.key):t.toString(36)}function M(e,t){e.func.call(e.context,t,e.count++)}function L(e,t,r){var n=e.result,o=e.keyPrefix;e=e.func.call(e.context,t,e.count++),Array.isArray(e)?A(e,n,r,function(e){return e}):null!=e&&(k(e)&&(e=function(e,t){return{$$typeof:i,type:e.type,key:t,ref:e.ref,props:e.props,_owner:e._owner}}(e,o+(!e.key||t&&t.key===e.key?"":(""+e.key).replace(E,"$&/")+"/")+r)),n.push(e))}function A(e,t,r,n,o){var i="";null!=r&&(i=(""+r).replace(E,"$&/")+"/"),$(e,L,t=C(t,i,n,o)),T(t)}var I={Children:{map:function(e,t,r){if(null==e)return e;var n=[];return A(e,n,null,t,r),n},forEach:function(e,t,r){if(null==e)return e;$(e,M,t=C(null,null,t,r)),T(t)},count:function(e){return $(e,function(){return null},null)},toArray:function(e){var t=[];return A(e,t,null,function(e){return e}),t},only:function(e){return k(e)||h("143"),e}},createRef:function(){return{current:null}},Component:m,PureComponent:O,createContext:function(e,t){return void 0===t&&(t=null),(e={$$typeof:s,_calculateChangedBits:t,_currentValue:e,_currentValue2:e,Provider:null,Consumer:null,unstable_read:null}).Provider={$$typeof:f,_context:e},e.Consumer=e,e.unstable_read=function(e,t){var r=w.currentDispatcher;return null===r&&h("277"),r.readContext(e,t)}.bind(null,e),e},forwardRef:function(e){return{$$typeof:y,render:e}},Fragment:c,StrictMode:l,unstable_AsyncMode:p,unstable_Profiler:a,createElement:P,cloneElement:function(e,t,r){(null===e||void 0===e)&&h("267",e);var o=void 0,u=n({},e.props),c=e.key,l=e.ref,a=e._owner;if(null!=t){void 0!==t.ref&&(l=t.ref,a=w.current),void 0!==t.key&&(c=""+t.key);var f=void 0;for(o in e.type&&e.type.defaultProps&&(f=e.type.defaultProps),t)j.call(t,o)&&!S.hasOwnProperty(o)&&(u[o]=void 0===t[o]&&void 0!==f?f[o]:t[o])}if(1===(o=arguments.length-2))u.children=r;else if(1<o){f=Array(o);for(var s=0;s<o;s++)f[s]=arguments[s+2];u.children=f}return{$$typeof:i,type:e.type,key:c,ref:l,props:u,_owner:a}},createFactory:function(e){var t=P.bind(null,e);return t.type=e,t},isValidElement:k,version:"16.5.2",__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED:{ReactCurrentOwner:w,assign:n}},U={default:I},N=U&&I||U;e.exports=N.default||N},function(e,t,r){"use strict";var n=Object.getOwnPropertySymbols,o=Object.prototype.hasOwnProperty,i=Object.prototype.propertyIsEnumerable;e.exports=function(){try{if(!Object.assign)return!1;var e=new String("abc");if(e[5]="de","5"===Object.getOwnPropertyNames(e)[0])return!1;for(var t={},r=0;r<10;r++)t["_"+String.fromCharCode(r)]=r;if("0123456789"!==Object.getOwnPropertyNames(t).map(function(e){return t[e]}).join(""))return!1;var n={};return"abcdefghijklmnopqrst".split("").forEach(function(e){n[e]=e}),"abcdefghijklmnopqrst"===Object.keys(Object.assign({},n)).join("")}catch(e){return!1}}()?Object.assign:function(e,t){for(var r,u,c=function(e){if(null===e||void 0===e)throw new TypeError("Object.assign cannot be called with null or undefined");return Object(e)}(e),l=1;l<arguments.length;l++){for(var a in r=Object(arguments[l]))o.call(r,a)&&(c[a]=r[a]);if(n){u=n(r);for(var f=0;f<u.length;f++)i.call(r,u[f])&&(c[u[f]]=r[u[f]])}}return c}},function(e,t,r){"use strict";var n=r(6);function o(){}e.exports=function(){function e(e,t,r,o,i,u){if(u!==n){var c=new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");throw c.name="Invariant Violation",c}}function t(){return e}e.isRequired=e;var r={array:e,bool:e,func:e,number:e,object:e,string:e,symbol:e,any:e,arrayOf:t,element:e,instanceOf:t,node:e,objectOf:t,oneOf:t,oneOfType:t,shape:t,exact:t};return r.checkPropTypes=o,r.PropTypes=r,r}},function(e,t,r){"use strict";e.exports="SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"}]);
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = void 0;
+var _react = _interopRequireWildcard(require("react"));
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+function _interopRequireWildcard(obj) {
+  if (obj && obj.__esModule) {
+    return obj;
+  } else {
+    var newObj = {};
+    if (obj != null) {
+      for (var key in obj) {
+        if (Object.prototype.hasOwnProperty.call(obj, key)) {
+          var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {};
+          if (desc.get || desc.set) {
+            Object.defineProperty(newObj, key, desc);
+          } else {
+            newObj[key] = obj[key];
+          }
+        }
+      }
+    }
+    newObj.default = obj;
+    return newObj;
+  }
+}
+
+(function() {
+  var enterModule = require("react-hot-loader").enterModule;
+  enterModule && enterModule(module);
+})();
+
+function _typeof(obj) {
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    _typeof = function _typeof(obj) {
+      return typeof obj;
+    };
+  } else {
+    _typeof = function _typeof(obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+  }
+  return _typeof(obj);
+}
+
+function _newArrowCheck(innerThis, boundThis) {
+  if (innerThis !== boundThis) {
+    throw new TypeError("Cannot instantiate an arrow function");
+  }
+}
+
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, descriptor.key, descriptor);
+  }
+}
+
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  return Constructor;
+}
+
+function _possibleConstructorReturn(self, call) {
+  if (call && (_typeof(call) === "object" || typeof call === "function")) {
+    return call;
+  }
+  return _assertThisInitialized(self);
+}
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
+}
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function");
+  }
+  subClass.prototype = Object.create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      writable: true,
+      configurable: true
+    }
+  });
+  if (superClass) _setPrototypeOf(subClass, superClass);
+}
+
+function _setPrototypeOf(o, p) {
+  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+    o.__proto__ = p;
+    return o;
+  };
+  return _setPrototypeOf(o, p);
+}
+
+function _assertThisInitialized(self) {
+  if (self === void 0) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+  return self;
+}
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+  return obj;
+}
+
+var ImageLoader = /*#__PURE__*/function(_Component) {
+  _inherits(ImageLoader, _Component);
+
+  function ImageLoader() {
+    var _getPrototypeOf2, _this2 = this;
+    var _this;
+    _classCallCheck(this, ImageLoader);
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(ImageLoader)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
+      isLoading: true,
+      isError: false,
+      src: null,
+      width: null,
+      height: null,
+      errMsg: null
+    });
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "isCancelled", false);
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "reload", function(props) {
+      var _this3 = this;
+      _newArrowCheck(this, _this2);// initialize
+      _this.setState({ isLoading: true, isError: false, src: null, errMsg: null });
+      var image = new Image;
+      image.src = props.src;
+      image.onload = function() {
+        _newArrowCheck(this, _this3);
+        !_this.isCancelled && _this.setState({
+          src: image.src,
+          width: image.width,
+          height: image.height,
+          isLoading: false,
+          isError: false,
+          errMsg: null
+        });
+        if (props.onLoad) {
+          props.onLoad(image);
+        }
+      }.bind(this);
+      image.onerror = function(err) {
+        _newArrowCheck(this, _this3);
+        _this.setState({
+          src: null,
+          width: null,
+          height: null,
+          isLoading: false,
+          isError: true,
+          errMsg: err
+        });
+        if (props.onError) {
+          props.onError(err);
+        }
+      }.bind(this);
+    }.bind(this));
+    return _this;
+  }
+
+  _createClass(ImageLoader, [{
+    key: "componentDidMount", value: function componentDidMount() {
+      this.reload(this.props);
+    }
+  }, {
+    key: "componentWillUnmount", value: function componentWillUnmount() {
+      this.isCancelled = true;
+    }
+  }, {
+    key: "render", value: function render() {
+      var _this$props = this.props, loading = _this$props.loading, error = _this$props.error,
+        image = _this$props.image, style = _this$props.style, className = _this$props.className,
+        alt = _this$props.alt;
+      var _this$state = this.state, src = _this$state.src, width = _this$state.width,
+        height = _this$state.height, isLoading = _this$state.isLoading,
+        isError = _this$state.isError, errMsg = _this$state.errMsg;
+      if (loading && isLoading) {
+        return loading();
+      }
+      if (error && isError && errMsg) {
+        return error(errMsg);
+      }
+      if (src && image) {
+        return image({ src: src, width: width, height: height });
+      }
+      if (src) {
+        return _react.default.createElement("img", {
+          src: src,
+          style: style,
+          className: className,
+          width: width,
+          height: height,
+          alt: alt
+        });
+      }
+      return null;
+    }
+  }, {
+    key: "__reactstandin__regenerateByEval",// @ts-ignore
+    value: function __reactstandin__regenerateByEval(key, code) {// @ts-ignore
+      this[key] = eval(code);
+    }
+  }], [{
+    key: "getDerivedStateFromProps", value: function getDerivedStateFromProps(props, state) {
+      if (props.src !== state.src) {
+        return props;
+      }
+      return null;
+    }
+  }]);
+  return ImageLoader;
+}(_react.Component);
+_defineProperty(ImageLoader, "propTypes", {
+  loading: _propTypes.default.func,
+  error: _propTypes.default.func,
+  image: _propTypes.default.func,
+  style: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.object]),
+  src: _propTypes.default.string,
+  alt: _propTypes.default.string,
+  className: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.object])
+});
+var _default = ImageLoader;
+var _default2 = _default;
+exports.default = _default2;
+;(function() {
+  var reactHotLoader = require("react-hot-loader").default;
+  var leaveModule = require("react-hot-loader").leaveModule;
+  if (!reactHotLoader) {
+    return;
+  }
+  reactHotLoader.register(ImageLoader, "ImageLoader", "/Users/vladimirdashko/react-image-loader/source/index.js");
+  reactHotLoader.register(_default, "default", "/Users/vladimirdashko/react-image-loader/source/index.js");
+  leaveModule(module);
+})();
+;

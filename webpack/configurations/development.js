@@ -30,9 +30,7 @@ export const generateDevelopmentConfiguration = () =>
       performance: {
         hints: false,
       },
-      plugins: [
-        new HotModuleReplacementPlugin(),
-      ],
+      plugins: [new HotModuleReplacementPlugin()],
     },
     generateSourceMaps({ devtool: 'cheap-module-eval-source-map' }),
   );

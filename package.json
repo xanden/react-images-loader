@@ -1,14 +1,12 @@
 {
   "name": "react-images-loader",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Image loader library for react.",
-  "main": "build/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "start": "nodemon",
-    "build:config": "webpack --config=\"./webpack/webpack.config.babel.js\" --env production --display-reasons ",
-    "build:prod": "cross-env-shell NODE_ENV=production BUILD_ENV=production npm run build:config",
-    "build:analyze": "run-s build:prod analyze",
-    "analyze": "webpack-bundle-analyzer \"./build/build-stats.json\" build",
+    "build": "babel source --out-dir dist",
+    "analyze": "webpack-bundle-analyzer \"./dist/build-stats.json\" dist",
     "lint": "eslint source",
     "lint:javascript": "jest --projects \"./jest/jest.eslint.config.json\"",
     "lint:css": "jest --projects \"./jest/jest.stylelint.config.json\"",
@@ -40,6 +38,7 @@
     "react-dom": "^16.5.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.1.2",
     "@babel/core": "^7.0.0",
     "@babel/plugin-proposal-class-properties": "^7.0.0",
     "@babel/plugin-proposal-decorators": "^7.0.0",
