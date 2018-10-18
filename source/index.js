@@ -98,8 +98,8 @@ class ImageLoader extends Component {
           src={src}
           style={style}
           className={className}
-          width={width}
-          height={height}
+          // width={width}
+          // height={height}
           alt={alt}
         />
       );
