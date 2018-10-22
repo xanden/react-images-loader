@@ -52,27 +52,28 @@ class ImageLoader extends Component {
     image.src = props.src;
     image.onload = () => {
       !this.isCancelled &&
-      this.setState({
-        src: image.src,
-        width: image.width,
-        height: image.height,
-        isLoading: false,
-        isError: false,
-        errMsg: null,
-      });
+        this.setState({
+          src: image.src,
+          width: image.width,
+          height: image.height,
+          isLoading: false,
+          isError: false,
+          errMsg: null,
+        });
       if (props.onLoad) {
         props.onLoad(image);
       }
     };
     image.onerror = err => {
-      this.setState({
-        src: null,
-        width: null,
-        height: null,
-        isLoading: false,
-        isError: true,
-        errMsg: err,
-      });
+      !this.isCancelled &&
+        this.setState({
+          src: null,
+          width: null,
+          height: null,
+          isLoading: false,
+          isError: true,
+          errMsg: err,
+        });
       if (props.onError) {
         props.onError(err);
       }
